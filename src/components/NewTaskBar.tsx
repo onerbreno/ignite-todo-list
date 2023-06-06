@@ -1,9 +1,8 @@
 import { PlusCircle } from 'phosphor-react'
 
-import styles from './NewTask.module.css'
+import styles from '../styles/NewTaskBar.module.css'
 
-
-export function NewTask() {
+export function NewTaskBar() {
     return (
         <form action="#" className={styles.taskForm}>
             <input type="text" placeholder='Adicione uma nova tarefa'/>

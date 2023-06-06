@@ -1,8 +1,6 @@
 .taskForm {
     display: flex;
     gap: 0.5rem;
-    margin: -1.6875rem;
-    
 }
 
 .taskForm input {

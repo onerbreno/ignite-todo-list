@@ -1,23 +1,20 @@
 import { Header } from "./components/Header"
-import { NewTask } from "./components/NewTask"
+import { NewTaskBar } from "./components/NewTaskBar"
 import './global.css'
 
 import styles from './App.module.css'
+import { TasksContainer } from "./components/TasksContainer"
 
 export function App() {
   return (
-    <div>
+    <>
       <Header />
     
-      <div className={styles.wrapper}>
-        <NewTask />
-        <main>
-          <div>
-            
-          </div>
-        </main>
-      </div>
-    </div>
+      <main className={styles.wrapper}>
+        <NewTaskBar />
+        <TasksContainer />
+      </main>
+    </>
   )
 }
 

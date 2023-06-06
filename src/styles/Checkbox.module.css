@@ -1,0 +1,42 @@
+.container {
+    padding: 0.204375rem;
+}
+
+.checkbox {
+    width: 1.090625rem;
+    height: 1.090625rem;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-100);
+}
+
+
+
+.default {
+    background: transparent;
+    border: 2px solid var(--blue-500);
+}
+
+.default:hover {
+    background: rgba(78, 168, 222, 0.2);
+    border: 2px solid var(--blue-900);
+}
+
+.checked {
+    background: var(--purple-900);
+    border: 2px solid var(--purple-900);
+}
+
+.checked:hover {
+    background: var(--purple-500);
+    border: 2px solid var(--purple-500);
+
+}

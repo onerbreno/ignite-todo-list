@@ -1,0 +1,48 @@
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.7rem;
+
+    border-radius: 8px;
+    border: 1px solid var(--gray-400);
+    padding: 1rem;
+
+    background: var(--gray-500);
+}
+
+.task.completed {
+    text-decoration: line-through;
+    color: var(--gray-300);
+    border: 1px solid var(--gray-500);
+}
+
+.task + .task {
+    margin-top: 0.75rem;
+}
+
+
+.task p {
+    font-size: 0.875rem;
+}
+
+.button {
+    background: transparent;
+    color: var(--gray-300);
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0.3125rem;
+
+    transition: color 0.1s, background-color 0.1s;
+}
+
+.button:hover {
+    background-color: var(--gray-400);
+    color: var(--red-500);
+}

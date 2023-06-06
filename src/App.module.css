@@ -1,9 +1,22 @@
 .wrapper {
     max-width: 46rem;
-    margin: 0 auto;
+    margin: -1.6875rem auto 0 auto;
+    padding: 0 3rem;
+
     display: grid;
 
-    padding: 0 1rem;
     grid-template-columns: 1fr;
+    grid-template-rows: 54px 1fr;
+    gap: 4rem;
     align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
 }

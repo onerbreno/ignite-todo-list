@@ -1,5 +1,5 @@
 import todoListLogo from '../assets/todo-list-logo.svg';
-import styles from './Header.module.css'
+import styles from '../styles/Header.module.css'
 
 export function Header() {
     return (
