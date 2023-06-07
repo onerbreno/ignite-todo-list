@@ -16,7 +16,7 @@ export function App() {
   const [tasks, setTasks] = useState<Task[]>([])
 
   function handleCreateTask(task: string) {
-    const newTask = { id: task.length + 1, content: task, isCompleted: false }
+    const newTask = { id: tasks.length + 1, content: task, isCompleted: false }
     setTasks([...tasks, newTask])
   }
 
