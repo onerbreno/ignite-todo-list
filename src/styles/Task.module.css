@@ -23,7 +23,10 @@
 
 
 .task p {
+    flex: 1;
     font-size: 0.875rem;
+    line-height: 1.225rem;
+    word-break: break-all;
 }
 
 .button {

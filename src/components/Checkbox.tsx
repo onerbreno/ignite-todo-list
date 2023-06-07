@@ -2,14 +2,25 @@ import styles from '../styles/Checkbox.module.css'
 
 import { Check } from 'phosphor-react'
 
-export function Checkbox() {
+interface CheckboxProps {
+    isChecked: boolean;
+    onClick: () => void;
+}
+
+export function Checkbox({ isChecked, onClick }: CheckboxProps) {
+
+    const checkboxClass = isChecked 
+        ? `${styles.checkbox} ${styles.checked}` 
+        : `${styles.checkbox} ${styles.default}`
+    
+
     return (
         <div className={styles.container}>
-            <button 
-                className={`${styles.checkbox} ${styles.checked}`}
+            <button onClick={onClick}
+                className={checkboxClass}
             >
                 <span>
-                    <Check weight='bold' size={12}/>
+                    { isChecked && (<Check weight='bold' size={12}/>) }
                 </span>
             </button>
         </div>
