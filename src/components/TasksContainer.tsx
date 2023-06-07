@@ -2,15 +2,10 @@ import styles from '../styles/TasksContainer.module.css'
 
 import taskBoard from '../assets/clipboard.png'
 import { Task } from './Task'
-
-type Task = {
-    id: number;
-    content: string;
-    isCompleted: boolean;
-}
+import { TaskType } from './Task'
 
 interface TasksContainerProps {
-    tasks: Task[];
+    tasks: TaskType[];
     onToggleTask: (id: number) => void;
     onDeleteTask: (id: number) => void;
 }
@@ -37,17 +32,17 @@ export function TasksContainer({ tasks, onToggleTask, onDeleteTask }: TasksConta
             </header>
             <div className={styles.tasks}>
                 { isTasksEmpty ? (
-                        <div className={styles.emptyTasks}>
-                            <img src={taskBoard} />
-                            <p>
-                                <strong>
-                                    Você ainda não tem tarefas cadastradas
-                                </strong>
-                                Crie tarefas e organize seus itens a fazer
-                            </p>
-                        </div>
-                    ) : (
-                        <>
+                    <div className={styles.emptyTasks}>
+                        <img src={taskBoard} />
+                        <p>
+                            <strong>
+                                Você ainda não tem tarefas cadastradas
+                            </strong>
+                            Crie tarefas e organize seus itens a fazer
+                        </p>
+                    </div>
+                ) : (
+                    <>
                         { tasks.map(task => {
                                 return (
                                     <Task
@@ -56,15 +51,10 @@ export function TasksContainer({ tasks, onToggleTask, onDeleteTask }: TasksConta
                                         onToggleTask={onToggleTask}
                                         onDeleteTask={onDeleteTask}
                                     />
-                              )
-                            })  
-                        }
-                        </>
-                    )
-
-                }
-
-                
+                                )
+                        }) }
+                    </>
+                ) }
             </div>
         </section>
     )

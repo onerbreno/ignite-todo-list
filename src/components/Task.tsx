@@ -2,22 +2,22 @@ import { Trash } from 'phosphor-react'
 
 import styles from '../styles/Task.module.css'
 import { Checkbox } from './Checkbox'
-interface Task {
+
+export interface TaskType {
     id: number;
     content: string;
     isCompleted: boolean;
 }
 
 interface TaskProps {
-    task: Task;
+    task: TaskType;
     onToggleTask: (id: number) => void;
     onDeleteTask: (id: number) => void;
 }
   
-
 export function Task({ task, onToggleTask, onDeleteTask }: TaskProps) {
 
-    const containerClass = task.isCompleted ? `${styles.task} ${styles.completed}` : styles.task
+    const taskClass = task.isCompleted ? `${styles.task} ${styles.completed}` : styles.task
 
     function handleDeleteTask() {
         onDeleteTask(task.id)
@@ -28,7 +28,7 @@ export function Task({ task, onToggleTask, onDeleteTask }: TaskProps) {
     }
 
     return (
-        <div className={containerClass}>
+        <div className={taskClass}>
             <Checkbox isChecked={task.isCompleted} onClick={handleToggleTask}/>
             <p>{task.content}</p>
             <button onClick={handleDeleteTask} className={styles.button}>

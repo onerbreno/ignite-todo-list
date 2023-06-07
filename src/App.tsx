@@ -5,15 +5,10 @@ import './global.css'
 import styles from './App.module.css'
 import { TasksContainer } from "./components/TasksContainer"
 import { useState } from "react"
-
-interface Task {
-  id: number;
-  content: string;
-  isCompleted: boolean;
-}
+import { TaskType } from "./components/Task"
 
 export function App() {
-  const [tasks, setTasks] = useState<Task[]>([])
+  const [tasks, setTasks] = useState<TaskType[]>([])
 
   function handleCreateTask(task: string) {
     const newTask = { id: tasks.length + 1, content: task, isCompleted: false }
